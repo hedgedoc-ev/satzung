@@ -9,19 +9,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        file: ['satzung', 'beitragsordnung']
-    name: Build pdf for ${{ matrix.file }}
+    name: Compile LaTeX
     steps:
       - name: Checkout git repository
         uses: actions/checkout@v2
-      - name: Compile LaTeX document
+      - name: Compile Satzung.tex
         uses: dante-ev/latex-action@latest
         with:
-          root_file: ${{ matrix.file }}.tex
+          root_file: satzung.tex
+      - name: Compile Beitragsordnung.tex
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: beitragsordnung.tex
       - uses: actions/upload-artifact@master
         with:
-          name: ${{ matrix.file }}-pdf
-          path: |
-            ${{ matrix.file }}.pdf
+          name: Satzung
+          path: "*.pdf"
