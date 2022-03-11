@@ -1,0 +1,78 @@
+\documentclass[12pt,paper=a4,ngerman]{scrreprt}
+
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{eurosym}
+\usepackage{xspace}
+\usepackage{chngcntr}
+\usepackage{tocloft}
+\usepackage[sfdefault,scaled=.85]{FiraSans}
+\usepackage{newtxsf}
+\usepackage{microtype}
+\usepackage{cleveref}
+\cftsetindents{section}{0em}{3em}
+
+\author{Der HedgeDoc e.V.}
+
+\hypersetup{colorlinks, linkcolor=black}
+
+\renewcommand*\euro{\officialeuro\xspace}
+\renewcommand\thesection{\S{\arabic{section}}}
+\renewcommand\theenumi{\arabic{enumi}}
+\renewcommand\theenumii{\alph{enumii}}
+
+\labelformat{enumii}{\thesection.\theenumi.\theenumii)}
+\labelformat{enumi}{\thesection.\theenumi.}
+
+\addtocounter{secnumdepth}{1}
+
+
+\title{Beitragsordnung des HedgeDoc e.V.}
+\date{Stand: 23.02.2022 - Version: 1.0}
+\begin{document}
+	\counterwithout*{subsection}{section}
+	\maketitle
+	%\newpage
+	
+	\textbf{Änderungshistorie}
+	\begin{description}
+		\item
+			Version 1: Beschlossen auf der Gründungsversammlung
+	\end{description}
+	\newpage
+	
+	\section{Grundsatz}
+    	Diese Beitragsordnung ist nicht Bestandteil der Satzung. Sie regelt die Beitragsverpflichtungen der Mitglieder sowie die Gebühren und Umlagen. Sie kann nur von der Mitgliederversammlung des Vereins geändert werden.
+	
+	\section{Beschlüsse}
+	\begin{enumerate}
+	    \item
+    	    Die Mitgliederversammlung beschließt die Höhe des Beitrags, die Aufnahmegebühr und Umlagen.
+        \item 
+    	    Die Beitragssätze gelten jeweils ab dem ersten Tag des auf den Beschluss folgenden Geschäftsjahres.
+    \end{enumerate}
+    	    
+    \section{Beiträge}
+    \begin{enumerate}
+        \item
+            Der Beitrag beträgt für jedes Mitglied pro Jahr mindestens 24 €. Auf freiwilliger Basis kann auch ein höherer Beitrag entrichtet werden.
+        \item
+            \label{sec:beiträge:mahngebühren}
+            Die Mahngebühren für verspätete Entrichtung des Mitgliedsbeitrags betragen 5 € pro angefangenen Monat.
+        \item
+            Der Mitgliedsbeitrag deckt keine Kosten (z. B. Kursgebühren, Eintrittsgelder usw.) für Sonderveranstaltungen des Vereins ab.
+    \end{enumerate}
+    	    
+	\section{Zahlung}
+	    \begin{enumerate}
+            \item
+                Die Zahlung der Beiträge erfolgt in der Regel im Bankeinzugsverfahren.
+            \item
+                Der Jahresbeitrag ist zum ersten Tag des Geschäftsjahres zu entrichten. Mitglieder, die dem Verein kein Lastschriftmandat erteilt haben, erhalten eine Rechnung, die innerhalb von 14 Tagen nach Erhalt bezahlt werden muss. Bei verspäteter Beitragszahlung werden Mahngebühren erhoben, die sich aus \ref{sec:beiträge:mahngebühren} ergeben.
+            \item
+                Mitglieder, die dem Verein neu beitreten, zahlen im Beitrittsjahr jeweils 1/12 des Jahresbeitrags pro Monat ihrer Mitgliedschaft. Der Monat, in dem das Mitglied dem Verein beigetreten ist, wird nicht mitgerechnet.
+	    \end{enumerate}
+	        
+\end{document}

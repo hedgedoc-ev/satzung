@@ -1,0 +1,27 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        file: ['satzung', 'beitragsordnung']
+    name: Build pdf for ${{ matrix.file }}
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: ${{ matrix.file }}.tex
+      - uses: actions/upload-artifact@master
+        with:
+          name: ${{ matrix.file }}-pdf
+          path: |
+            ${{ matrix.file }}.pdf
