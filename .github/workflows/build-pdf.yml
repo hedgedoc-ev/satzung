@@ -12,7 +12,7 @@ jobs:
     name: Compile LaTeX
     steps:
       - name: Checkout git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: Compile Satzung.tex
         uses: dante-ev/latex-action@latest
         with:
